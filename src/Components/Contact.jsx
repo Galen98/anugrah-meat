@@ -2,7 +2,7 @@ export default function Contact(){
 
     return(
         <>
-    <div className="mx-auto max-w-screen-xl text-center py-16 lg:py-24 p-2" id="produk">
+    <div className="mx-auto max-w-screen-xl text-center py-16 lg:py-24 p-2" id="kontak">
     <div className="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
     <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Contact Us</h5>
     <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">

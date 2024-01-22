@@ -4,17 +4,18 @@ export default function Body(){
     const [text, setText] = useState('')
     const [header, setHead] = useState('')
     useEffect(() => {
-        axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/mengapaMemilihKami/sheet1')
+        axios.get('https://api.apispreadsheets.com/data/git6R0IUStWZPIDl/')
           .then(response => {
-            setText(response.data.sheet1);
+            setText(response.data.data);
           })
           .catch(error => {
             console.error('Error fetching data:', error);
           });
 
-          axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/copywriting/sheet1')
+          axios.get('https://sheetdb.io/api/v1/z1ei4cqo270yv')
           .then(response => {
-            setHead(response.data.sheet1[0].header2);
+            setHead(response.data[0].header2);
+            console.log(response.data)
           })
           .catch(error => {
             console.error('Error fetching data:', error);

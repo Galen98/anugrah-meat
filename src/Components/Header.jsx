@@ -6,10 +6,10 @@ export default function Header(){
     const [description, setDesc] = useState('')
 
     useEffect(() => {
-        axios.get('https://api.sheety.co/ca8c3dbf07a7f25c4580d99a5bb63100/copywriting/sheet1')
+        axios.get('https://sheetdb.io/api/v1/z1ei4cqo270yv')
         .then(response => {
-            setHeader(response.data.sheet1[0].header1)
-            setDesc(response.data.sheet1[0].description1)
+            setHeader(response.data[0].header1)
+            setDesc(response.data[0].description1)
         })
     },[])
 

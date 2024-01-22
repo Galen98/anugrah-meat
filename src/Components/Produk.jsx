@@ -42,16 +42,17 @@ export default function Produk(){
     <center>
     <div className="relative justify-center flex w-full max-w-xs flex-col 
     overflow-hidden rounded-lg border border-gray-100 bg-white shadow-0 border-0">
-  <div className="mx-3 mt-3 flex h-60 overflow-hidden rounded-xl">
+  <div className="mx-3 mt-3 flex h-60 overflow-hidden rounded-md">
   <img className="object-cover w-full h-full" 
     src={data.foto} alt={data.nama} />
   </div>
   <div className="mt-4 px-5 pb-5">
-      <h5 className="text-xl font-light text-left font-semibold tracking-tight text-slate-900">{data.nama}</h5>
+      <h5 className="text-xl font-light text-left tracking-tight text-slate-900">{data.nama}</h5>
     <div className="mt-2 mb-5 flex items-center justify-between">
       <p>
-        <span className="text-lg font-extrabold text-slate-900">
-        <FormatRupiah value={data.Harga}/> / {data.Satuan}</span>
+        <span className="text-xl font-bold text-slate-900">
+        <FormatRupiah value={data.Harga}/></span>
+        <span class="text-md text-slate-900"> / {data.Satuan}</span>
       </p>
     </div>
     <button onClick={()=>document.getElementById(`${data.id}`).showModal()}
@@ -79,7 +80,7 @@ export default function Produk(){
     </div>
     <div className="modal-action">
       <form method="dialog">
-        <button className="btn btn-neutral mr-2 rounded-xl text-white"
+        <button className="btn btn-neutral mr-2 text-white"
         onClick={() => submitPesan(data.nama)}>Kirim</button>
         <button className="btn btn-ghost">Batal</button>
       </form>
